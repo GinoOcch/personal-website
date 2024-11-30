@@ -542,6 +542,7 @@ function NavUl($$payload, $$props) {
 function _layout($$payload, $$props) {
   push();
   let { children } = $$props;
+  const prerender = true;
   $$payload.out += `<div class="bg-white dark:bg-slate-900">`;
   Navbar($$payload, {
     class: "bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-300",
@@ -579,6 +580,7 @@ function _layout($$payload, $$props) {
   $$payload.out += `<!----> <div class="container mx-auto">`;
   children($$payload);
   $$payload.out += `<!----></div></div>`;
+  bind_props($$props, { prerender });
   pop();
 }
 export {

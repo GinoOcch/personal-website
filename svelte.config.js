@@ -19,10 +19,7 @@ const config = {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		  }),
-		  paths: {
-			relative: false
-		  }
+		  })
 	}
 };
 

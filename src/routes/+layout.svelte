@@ -2,6 +2,7 @@
 	import '../app.css';
   import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, DarkMode } from 'flowbite-svelte';
 	let { children } = $props();
+  export const prerender = true;
 </script>
 
 <div class="bg-white dark:bg-slate-900">

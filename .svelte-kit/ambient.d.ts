@@ -28,7 +28,6 @@
 declare module '$env/static/private' {
 	export const SHELL: string;
 	export const npm_command: string;
-	export const USER_ZDOTDIR: string;
 	export const __ETC_PROFILE_DONE: string;
 	export const npm_config_userconfig: string;
 	export const COLORTERM: string;
@@ -39,7 +38,6 @@ declare module '$env/static/private' {
 	export const NIX_LD_LIBRARY_PATH: string;
 	export const XDG_SESSION_PATH: string;
 	export const NIX_BUILD_CORES: string;
-	export const TERM_PROGRAM_VERSION: string;
 	export const configureFlags: string;
 	export const SPEECHD_CMD: string;
 	export const XDG_BACKEND: string;
@@ -61,8 +59,10 @@ declare module '$env/static/private' {
 	export const npm_config_local_prefix: string;
 	export const builder: string;
 	export const DESKTOP_SESSION: string;
+	export const KITTY_PID: string;
 	export const HL_INITIAL_WORKSPACE_TOKEN: string;
 	export const shellHook: string;
+	export const NO_AT_BRIDGE: string;
 	export const npm_config_globalconfig: string;
 	export const XCURSOR_SIZE: string;
 	export const GPG_TTY: string;
@@ -84,9 +84,9 @@ declare module '$env/static/private' {
 	export const CXX: string;
 	export const _: string;
 	export const system: string;
+	export const KITTY_PUBLIC_KEY: string;
 	export const XDG_GREETER_DATA_DIR: string;
 	export const HOST_PATH: string;
-	export const VSCODE_INJECTION: string;
 	export const GTK2_RC_FILES: string;
 	export const IN_NIX_SHELL: string;
 	export const doInstallCheck: string;
@@ -103,6 +103,7 @@ declare module '$env/static/private' {
 	export const cmakeFlags: string;
 	export const outputs: string;
 	export const GIO_EXTRA_MODULES: string;
+	export const KITTY_WINDOW_ID: string;
 	export const NIX_STORE: string;
 	export const XDG_SEAT_PATH: string;
 	export const LD: string;
@@ -110,7 +111,6 @@ declare module '$env/static/private' {
 	export const DIRENV_DIFF: string;
 	export const INIT_CWD: string;
 	export const READELF: string;
-	export const CHROME_DESKTOP: string;
 	export const GTK_A11Y: string;
 	export const XDG_CACHE_HOME: string;
 	export const NIX_USER_PROFILE_DIR: string;
@@ -121,6 +121,7 @@ declare module '$env/static/private' {
 	export const depsBuildBuild: string;
 	export const WINEDLLOVERRIDES: string;
 	export const XDG_SESSION_CLASS: string;
+	export const TERMINFO: string;
 	export const TERM: string;
 	export const npm_package_name: string;
 	export const GTK_PATH: string;
@@ -160,7 +161,6 @@ declare module '$env/static/private' {
 	export const XDG_STATE_HOME: string;
 	export const npm_execpath: string;
 	export const PATHMARKS_FILE: string;
-	export const LD_LIBRARY_PATH: string;
 	export const XDG_RUNTIME_DIR: string;
 	export const NODE_PATH: string;
 	export const depsBuildTarget: string;
@@ -173,7 +173,6 @@ declare module '$env/static/private' {
 	export const JOURNAL_STREAM: string;
 	export const XCURSOR_THEME: string;
 	export const XDG_DATA_DIRS: string;
-	export const GDK_BACKEND: string;
 	export const LIBEXEC_PATH: string;
 	export const OBJDUMP: string;
 	export const npm_config_noproxy: string;
@@ -184,7 +183,6 @@ declare module '$env/static/private' {
 	export const CC: string;
 	export const GDMSESSION: string;
 	export const NIX_CC: string;
-	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
 	export const depsBuildTargetPropagated: string;
 	export const depsBuildBuildPropagated: string;
@@ -193,6 +191,7 @@ declare module '$env/static/private' {
 	export const npm_config_global_prefix: string;
 	export const NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu: string;
 	export const CONFIG_SHELL: string;
+	export const KITTY_INSTALLATION_DIR: string;
 	export const __structuredAttrs: string;
 	export const npm_node_execpath: string;
 	export const RANLIB: string;
@@ -201,7 +200,6 @@ declare module '$env/static/private' {
 	export const NIX_LDFLAGS: string;
 	export const nativeBuildInputs: string;
 	export const name: string;
-	export const TERM_PROGRAM: string;
 	export const AGKOZAK_GIT_VERSION: string;
 	export const depsHostHostPropagated: string;
 	export const NODE_ENV: string;
@@ -238,7 +236,6 @@ declare module '$env/dynamic/private' {
 	export const env: {
 		SHELL: string;
 		npm_command: string;
-		USER_ZDOTDIR: string;
 		__ETC_PROFILE_DONE: string;
 		npm_config_userconfig: string;
 		COLORTERM: string;
@@ -249,7 +246,6 @@ declare module '$env/dynamic/private' {
 		NIX_LD_LIBRARY_PATH: string;
 		XDG_SESSION_PATH: string;
 		NIX_BUILD_CORES: string;
-		TERM_PROGRAM_VERSION: string;
 		configureFlags: string;
 		SPEECHD_CMD: string;
 		XDG_BACKEND: string;
@@ -271,8 +267,10 @@ declare module '$env/dynamic/private' {
 		npm_config_local_prefix: string;
 		builder: string;
 		DESKTOP_SESSION: string;
+		KITTY_PID: string;
 		HL_INITIAL_WORKSPACE_TOKEN: string;
 		shellHook: string;
+		NO_AT_BRIDGE: string;
 		npm_config_globalconfig: string;
 		XCURSOR_SIZE: string;
 		GPG_TTY: string;
@@ -294,9 +292,9 @@ declare module '$env/dynamic/private' {
 		CXX: string;
 		_: string;
 		system: string;
+		KITTY_PUBLIC_KEY: string;
 		XDG_GREETER_DATA_DIR: string;
 		HOST_PATH: string;
-		VSCODE_INJECTION: string;
 		GTK2_RC_FILES: string;
 		IN_NIX_SHELL: string;
 		doInstallCheck: string;
@@ -313,6 +311,7 @@ declare module '$env/dynamic/private' {
 		cmakeFlags: string;
 		outputs: string;
 		GIO_EXTRA_MODULES: string;
+		KITTY_WINDOW_ID: string;
 		NIX_STORE: string;
 		XDG_SEAT_PATH: string;
 		LD: string;
@@ -320,7 +319,6 @@ declare module '$env/dynamic/private' {
 		DIRENV_DIFF: string;
 		INIT_CWD: string;
 		READELF: string;
-		CHROME_DESKTOP: string;
 		GTK_A11Y: string;
 		XDG_CACHE_HOME: string;
 		NIX_USER_PROFILE_DIR: string;
@@ -331,6 +329,7 @@ declare module '$env/dynamic/private' {
 		depsBuildBuild: string;
 		WINEDLLOVERRIDES: string;
 		XDG_SESSION_CLASS: string;
+		TERMINFO: string;
 		TERM: string;
 		npm_package_name: string;
 		GTK_PATH: string;
@@ -370,7 +369,6 @@ declare module '$env/dynamic/private' {
 		XDG_STATE_HOME: string;
 		npm_execpath: string;
 		PATHMARKS_FILE: string;
-		LD_LIBRARY_PATH: string;
 		XDG_RUNTIME_DIR: string;
 		NODE_PATH: string;
 		depsBuildTarget: string;
@@ -383,7 +381,6 @@ declare module '$env/dynamic/private' {
 		JOURNAL_STREAM: string;
 		XCURSOR_THEME: string;
 		XDG_DATA_DIRS: string;
-		GDK_BACKEND: string;
 		LIBEXEC_PATH: string;
 		OBJDUMP: string;
 		npm_config_noproxy: string;
@@ -394,7 +391,6 @@ declare module '$env/dynamic/private' {
 		CC: string;
 		GDMSESSION: string;
 		NIX_CC: string;
-		ORIGINAL_XDG_CURRENT_DESKTOP: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
 		depsBuildTargetPropagated: string;
 		depsBuildBuildPropagated: string;
@@ -403,6 +399,7 @@ declare module '$env/dynamic/private' {
 		npm_config_global_prefix: string;
 		NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu: string;
 		CONFIG_SHELL: string;
+		KITTY_INSTALLATION_DIR: string;
 		__structuredAttrs: string;
 		npm_node_execpath: string;
 		RANLIB: string;
@@ -411,7 +408,6 @@ declare module '$env/dynamic/private' {
 		NIX_LDFLAGS: string;
 		nativeBuildInputs: string;
 		name: string;
-		TERM_PROGRAM: string;
 		AGKOZAK_GIT_VERSION: string;
 		depsHostHostPropagated: string;
 		NODE_ENV: string;
