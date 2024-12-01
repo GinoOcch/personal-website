@@ -1,43 +1,12 @@
 <script lang=ts>
   import Icon from '@iconify/svelte';
-
-  import Cite from 'citation-js';
-    import '@citation-js/plugin-bibtex';
-    import { pubbib } from '../lib/pubs.bib';
-    import { acsfmtcsl } from '../lib/acs.csl';
-
-    //config.templates.add('acs', acsfmtcsl)
-    //Cite.CSL.register.addTemplate('acs', acsfmtcsl);
-    let config = Cite.plugins.config.get('@csl')
-    config.templates.add('acs', acsfmtcsl)
-
-    const cite = new Cite(pubbib);
-
-    let acscitations = cite.format('bibliography', {
-        format: 'html',
-        template: 'acs',
-        lang: 'en-US'
-    });
-
-    const cslEntryClass = 'csl-entry my-4 text-slate-900 dark:text-slate-300';
-
-    // There might be a better way to do this, but for now, we are using string manipulation
-    acscitations = acscitations.replace(/class="csl-entry"/g, `class="${cslEntryClass}"`);
-    acscitations = acscitations.replace(/class="csl-left-margin"/g, 'class="csl-left-margin inline mr-5"');
-    acscitations = acscitations.replace(/class="csl-right-inline"/g, 'class="csl-right-inline inline"');
-
-    // Add DOI links
-    // Note for convenience, we are using the DOI as the entry id
-    // Otherwise, we would need to parse the entry to get the DOI
-    acscitations = acscitations.replace(new RegExp(`<div data-csl-entry-id="([^"]+)" class="${cslEntryClass}">`, 'g'), `<div data-csl-entry-id="$1" class="${cslEntryClass}"><a href="https://doi.org/$1" target="_blank">`);
-    acscitations = acscitations.replace(/<\/div>\s*<\/div>/g, '</a></div></div>');
-
-
+  import { pubs } from '$lib/pubs';
+  import Citation from '$lib/components/Citation.svelte';
 </script>
 
-<div class="text-justify text-lg my-4 text-slate-900 dark:text-slate-300">
-	<div class="mx-auto flex flex-row justify-center items-center mb-4">
-		<img src="/images/profile.jpg" class="h-52 mr-10 rounded-full"/>
+<div class="text-justify text-lg my-4 mx-10 text-slate-900 dark:text-slate-300">
+	<div class="mx-auto flex md:flex-row flex-col justify-center items-center mb-4">
+		<img src="/images/profile.jpg" class="h-52 mr-10 rounded-full" alt=""/>
         <div class="">
             <h1 class="text-2xl font-bold text-center mb-2">Gino&nbsp;Occhialini</h1>
             <p class="text-center font-bold ">Postdoctoral&nbsp;Fellow</p>
@@ -72,9 +41,12 @@
 		</p>
 </div>
 
-<div class="text-justify text-lg mb-4">
+<div class="text-justify text-lg mb-4 mx-10">
 	<p class="mb-5 text-lg font-bold text-slate-900 dark:text-slate-300">Publications:</p>
-  {@html acscitations}
-
-
+  <!-- for each pub, display citation -->
+   <div class="text-slate-900 dark:text-slate-300">
+    {#each pubs as pub, i}
+        <Citation publication={pub} cssclass="mb-2" listchar='({i+1})   '/>
+    {/each}
+    </div>
 </div>
